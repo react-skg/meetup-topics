@@ -1,0 +1,13 @@
+query getPosts {
+	allPosts(first: 30) {
+    id
+    title
+    description
+    _votesMeta {
+      count
+    }
+    user {
+      name
+    }
+  }
+}

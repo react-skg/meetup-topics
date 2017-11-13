@@ -1,0 +1,9 @@
+query getUser {
+  user {
+    id,
+    auth0UserId,
+    imgUrl,
+    name,
+    role
+  }
+}

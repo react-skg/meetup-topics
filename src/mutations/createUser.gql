@@ -1,0 +1,14 @@
+mutation createUser(
+  $idToken: String!
+  $name: String!
+  $imgUrl: String!
+) {
+  createUser(
+    authProvider: { auth0: { idToken: $idToken } }
+    name: $name
+    imgUrl: $imgUrl
+    role: User
+  ) {
+    id
+  }
+}
