@@ -60,3 +60,4 @@ typings/
 # Application files
 
 public
+.DS_Store
