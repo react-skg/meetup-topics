@@ -1,0 +1,27 @@
+admin refers to USER_ROLE
+creator is the creator of this node
+
+Permissions:
+  Post:
+    ✔ Create -> Authenticated User @done (2017-11-12 20:23:31)
+    ✔ Read -> Everyone @done (2017-11-12 20:23:34)
+    ✔ Update -> Authenticated User AND User is (creator OR admin) @done (2017-11-12 20:25:30)
+    ✔ Delete -> Authenticated User AND User is (creator OR admin) @done (2017-11-12 20:27:55)
+
+  Vote:
+    ✔ Create -> Authenticated User AND User is NOT creator:of:VOTE @done (2017-11-12 19:35:16)
+    ✔ Read -> Everyone @done (2017-11-12 19:33:50)
+    ✔ Update -> Authenticated User AND User is (creator) ??? @done (2017-11-12 19:37:48)
+    ✔ Delete -> Authenticated User AND User is (creator) @done (2017-11-12 19:37:47)
+
+  Comment:
+    ✔ Create -> Authenticated User @done (2017-11-12 19:24:54)
+    ✔ Read -> Everyone @done (2017-11-12 19:24:57)
+    ✔ Update -> Authenticated User AND User is (creator OR admin) @done (2017-11-12 19:31:47)
+    ✔ Delete -> Authenticated User AND User is (creator OR admin) @done (2017-11-12 19:33:36)
+
+  User:
+    ☐ Create -> Login with auth0
+    ✔ Read -> Everyone @done (2017-11-12 20:33:33)
+    ✔ Update -> Authenticated User AND User is (creator OR admin) @done (2017-11-12 20:32:18)
+    ✔ Delete -> Authenticated User AND User is (creator OR admin) @done (2017-11-12 20:33:32)

@@ -1,0 +1,46 @@
+# Top-most EditorConfig file:
+root = true
+
+# Settings for JavaScript files:
+[*.js]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+trim_trailing_whitespace = true
+insert_final_newline = false
+
+# Settings for JSX files:
+[*.jsx]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+trim_trailing_whitespace = true
+insert_final_newline = false
+
+
+# Settings for Markdown files:
+[*.md]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+trim_trailing_whitespace = true
+
+# Settings for CSS files:
+[*.css]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+trim_trailing_whitespace = true
+
+# Settings for all other files
+[*.*]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+trim_trailing_whitespace = true
+insert_final_newline = false
