@@ -1,5 +1,8 @@
-mutation createVote($postId: ID, $post: VotepostPost, $userId: ID) {
+mutation createVote($postId: ID, $userId: ID) {
   createVote(postId: $postId, userId: $userId) {
-    id
+    id,
+    post {
+      id
+    }
   }
 }

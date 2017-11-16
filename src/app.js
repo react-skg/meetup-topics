@@ -6,6 +6,8 @@ import { ApolloProvider } from 'react-apollo';
 import Authorisation from 'services/authorisation';
 import createApolloClient from 'client';
 import MeetupTopics from 'components';
+
+import '../semantic/dist/semantic.css';
 // @TODO Get the uri from the environment
 const uri = 'https://api.graph.cool/simple/v1/cj9ld3aky0rlu0112332rq9q3';
 

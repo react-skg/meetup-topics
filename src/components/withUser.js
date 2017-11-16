@@ -8,6 +8,7 @@ const withUser = graphql(getUser, {
       user = {};
     }
     return {
+      userId: user.id,
       auth0UserId: user.auth0UserId,
       name: user.name,
       imgUrl: user.imgUrl,

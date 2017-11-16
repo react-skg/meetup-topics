@@ -10,5 +10,9 @@ mutation createPost(
   ) {
     id
     title
+    description,
+    user {
+      name
+    }
   }
 }

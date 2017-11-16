@@ -30,7 +30,9 @@ class Auth extends Component {
         idToken: auth.auth0IdToken,
         name: auth.profile.name,
         imgUrl: auth.profile.picture
-      });
+      }).then(({ data: { id } }) => {
+        localStorage.setItem('userId', id);
+      }).catch(console.warn('Found User'));
     }
 
     this.setState({

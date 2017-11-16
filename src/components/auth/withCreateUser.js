@@ -8,7 +8,7 @@ const withCreateUser = graphql(createUser, {
         return null;
       }
 
-      mutate({ variables });
+      return mutate({ variables });
     }
   })
 });
