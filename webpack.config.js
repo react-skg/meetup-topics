@@ -37,16 +37,6 @@ const gqlRules = {
   use: 'graphql-tag/loader'
 };
 
-const cssRules = {
-  test: '',
-  use: [
-    {
-      loader: '',
-      options: {}
-    }
-  ]
-};
-
 // SCSS Rules
 const scssRules = {
   test: /\.(scss|css)/,
@@ -54,10 +44,10 @@ const scssRules = {
     fallback: 'style-loader',
     use: [
       {
-        loader: 'css-loader'
-        // options: {
-        //   minimize: !config.LOCAL
-        // }
+        loader: 'css-loader',
+        options: {
+          minimize: true
+        }
       },
       { loader: 'sass-loader' }
     ]
