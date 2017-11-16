@@ -35,12 +35,3 @@ end_of_line = lf
 indent_size = 2
 indent_style = space
 trim_trailing_whitespace = true
-
-# Settings for all other files
-[*.*]
-charset = utf-8
-end_of_line = lf
-indent_size = 2
-indent_style = space
-trim_trailing_whitespace = true
-insert_final_newline = false

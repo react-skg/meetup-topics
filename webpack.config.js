@@ -2,6 +2,9 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+const imagesRegex = /\.(bmp|gif|jpg|jpeg|png|svg)$/;
+const fontsRegex = /\.(eot|ttf|woff|woff2)(\?v=\d+\.\d+\.\d+)?$/;
+
 // Presets for the babel loader
 const babelPresets = [
   [
@@ -46,7 +49,7 @@ const cssRules = {
 
 // SCSS Rules
 const scssRules = {
-  test: /\.scss/,
+  test: /\.(scss|css)/,
   use: ExtractTextPlugin.extract({
     fallback: 'style-loader',
     use: [
@@ -59,6 +62,28 @@ const scssRules = {
       { loader: 'sass-loader' }
     ]
   })
+};
+
+// Images Rules
+const imagesRules = {
+  test: imagesRegex,
+  use: {
+    loader: 'file-loader',
+    options: {
+      name: '[name].[ext]'
+    }
+  }
+};
+
+// Fonts Rules
+const fontsRules = {
+  test: fontsRegex,
+  use: {
+    loader: 'file-loader',
+    options: {
+      name: '[name].[ext]'
+    }
+  }
 };
 
 const config = {
@@ -88,7 +113,7 @@ const config = {
     })
   ],
   module: {
-    rules: [jsRules, gqlRules, scssRules]
+    rules: [jsRules, gqlRules, scssRules, imagesRules, fontsRules]
   }
 };
 
